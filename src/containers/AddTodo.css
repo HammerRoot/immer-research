@@ -1,0 +1,25 @@
+.add-todo {
+  display: flex;
+}
+
+.add-todo > input {
+  padding: 4px 6px;
+  font-size: 20px;
+  color: #333;
+  outline: none;
+}
+
+.add-todo > button {
+  margin-left: 12px;
+  padding: 2px 8px;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  color: #fff;
+  background: #177ddc;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
