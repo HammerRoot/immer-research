@@ -2,15 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { getVisibleTodos } from '../config'
-import { toggleTodo } from '../actions'
+import { toggleTodoImmer } from '../actions'
 import TodoItem from '../components/TodoItem'
 
 const mapStateToProps = state => ({
-  todos: getVisibleTodos(state.todos, state.visibilityFilter),
+  todos: getVisibleTodos(state.todosImmer, state.visibilityFilterImmer.filter),
 })
 
 const mapDispatchToProps = dispatch => ({
-  toggleTodo: id => dispatch(toggleTodo(id)),
+  toggleTodo: id => dispatch(toggleTodoImmer(id)),
 })
 
 const TodoList = ({ todos, toggleTodo }) => {

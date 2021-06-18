@@ -5,12 +5,16 @@ import { Provider } from 'react-redux'
 
 import rootReducer from './reducers'
 import App from './layout/App'
+import AppImmer from './layout/AppImmer'
 
 const store = createStore(rootReducer)
 
 render(
   <Provider store={store}>
-    <App />
+    <>
+      <App />
+      <AppImmer />
+    </>
   </Provider>,
   document.getElementById('root')
 )

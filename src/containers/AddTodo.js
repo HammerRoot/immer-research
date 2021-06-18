@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { addTodo } from '../actions'
+import { addTodo, addTodoImmer } from '../actions'
 import './AddTodo.css'
 
-const AddTodo = ({ dispatch }) => {
+const AddTodo = ({ dispatch, type }) => {
   let input
 
   const handleClick = () => {
@@ -12,7 +12,8 @@ const AddTodo = ({ dispatch }) => {
       return false
     }
 
-    dispatch(addTodo(input.value))
+    const fn = type === 'immer' ? addTodoImmer : addTodo
+    dispatch(fn(input.value))
 
     input.value = ''
   }
